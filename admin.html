@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpas paras acampar</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="/img/camping.png" alt="" width="100%" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item"></li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="admin.html"
+                  >Administracion</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="py-3 bg-dark my-2">
+        <h1 class="container text-center text-white my-4">Tienda de Carpas</h1>
+      </div>
+      <div class="container pt-5">
+        <h3 class="text-center">Panel de Administracion</h3>
+      </div>
+      <form
+        class="container shadow-none p-3 mb-5 bg-light rounded"
+        id="formulario"
+      >
+        <div class="row g-1">
+          <div class="col-sm-12 col-md-12 col-lg-4 my-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Codigo generado automaticamente"
+              aria-label="First name"
+              id="codigo"
+              disabled
+            />
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 my-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              aria-label="Last name"
+              id="nombre"
+            />
+          </div>
+          <div class="invalid-feedback">Debe completar este campo</div>
+          <div class="col-sm-12 col-md-12 col-lg-4 my-3">
+            <select id="inputTipo" class="form-select">
+              <option value="0" selected>Tipo</option>
+              <option value="Iglu">Iglu</option>
+              <option value="Canadiense">Canadiense</option>
+              <option value="Gasevos/Comedores">Gasevos/Comedores</option>
+              <option value="Familiares">Familiares</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 my-3">
+            <select id="inputPersona" class="form-select" required>
+              <option value="0" selected>N° personas</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 m-auto">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Cantidad"
+              aria-label="First name"
+              id="cantidad"
+            />
+          </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-12 my-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Descripcion"
+              aria-label="First name"
+              id="descripcion"
+            />
+          </div>
+
+          <div class="col-sm-12 col-md-12 col-lg-12 my-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Url"
+              aria-label="First name"
+              id="url"
+            />
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <div
+          class="alert alert-danger mt-2 d-none"
+          role="alert"
+          id="textAlerta"
+        >
+          Debe completar todos los campos marcados
+        </div>
+      </form>
+      <section>
+        <table class="table table-striped table-success container">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">N° Personas</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Url</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+           
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

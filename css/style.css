@@ -1,0 +1,11 @@
+.fondo{
+    background-image:  url('/img/fondoOriginal.jpg');
+    background-size: 100% 100%;
+    
+}
+
+.color{
+    background: darkblue;
+    width: 50px;
+    height: 50px;
+}
